@@ -1,10 +1,26 @@
 .main-nav {
+    // All levels
     ul {
         list-style: none;
         margin: 0 !important;
         padding: 0 !important;
     }
     li {
-        display: inline;
+        display: inline-block;
     }
+    a {
+        display: block;
+        color: #313036;
+        font-size: 20px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color: $secondaryColor;
+        }
+    }
+    // Top level
+    > ul > li > a {
+        padding: 0.25rem 1rem 3rem 0.25rem;
+        font-size: 23px;
+    }
+
 }

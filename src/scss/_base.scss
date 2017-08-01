@@ -3,6 +3,9 @@ body {
     font-family: Arial, sans-serif;
     color: $textColor;
 }
+a, a:active, a:hover, a:visited, a:focus {
+    text-decoration: none !important;
+}
 .h1, h1 {
     font-size: calc(2rem - 2px); // 30px
 }
@@ -16,4 +19,9 @@ body {
 
 .h4, h4 {
     font-size: calc(2rem - 12px); // 20px
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

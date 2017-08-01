@@ -3,8 +3,8 @@
     $postId = get_the_post_id();
 ?>
 
-<div class="footer-tagline">
-    Let us put our experience and technology to work for you today
+<div class="container-fluid text-center footer-tagline h2">
+    <em>Let us put our experience and technology to work for you today</em>
 </div>
 
 <?php if( $postId != 15 ): ?>
