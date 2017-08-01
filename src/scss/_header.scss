@@ -1,0 +1,35 @@
+.site-header {
+    height: 171px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 !important;
+}
+.header-logo {
+    margin-right: auto;
+    align-self: center;
+}
+.header-nav, .header-phone {
+    margin-right: 1rem;
+}
+.header-nav, .header-phone, .header-request {
+    align-self: flex-end;
+}
+.header-request {
+    display: flex;
+    align-self: stretch;
+    a {
+        display: block;
+        align-self: stretch;
+        padding: 7rem 4.5rem 0 4.5rem;
+        text-decoration: none !important;
+        font-size: 1.35rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff !important;
+        background-color: $secondaryColor;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            background-color: $primaryColor;
+        }
+    }
+}
