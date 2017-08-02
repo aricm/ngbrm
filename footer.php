@@ -29,11 +29,34 @@
                 <a href="https://plus.google.com/+BrmincClearwater/posts" target="_blank"><i class="fa fa-fw fa-google-plus"></i></a>
                 <a href="https://www.youtube.com/channel/UCM7M4l6nAJ-aGWcaZgsQzpQ" target="_blank"><i class="fa fa-fw fa-youtube"></i></a>
             </div>
-            <div class="logo">logo</div>
+            <div class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/footer-logo.png" alt=""></a></div>
         </div>
 
-        <div class="row associations">
-            <div class="">assoc. icons</div>
+        <div class="row affiliations">
+            <div class="aff">
+                <a href="http://www.naidonline.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-naid.png" alt=""></a>
+            </div>
+            <div class="aff">
+                <a href="http://www.ahima.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-ahima.png" alt=""></a>
+            </div>
+            <div class="aff">
+                <a href="http://www.aiim.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-aiim.png" alt=""></a>
+            </div>
+            <div class="aff">
+                <a style="cursor: default;" href="javascript:void(0)" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-nrc.png" alt=""></a>
+            </div>
+            <div class="aff">
+                <a href="http://www.prismintl.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-prism.png" alt=""></a>
+            </div>
+            <div class="aff">
+                <a href="https://www.floridabar.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-fba.png" alt=""></a>
+            </div>
+            <div class="aff">
+                <a href="http://www.fhima.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-fhima.png" alt=""></a>
+            </div>
+            <div class="aff">
+                <a href="http://www.arma.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-arma.png" alt=""></a>
+            </div>
         </div>
 
         <div class="row copyright">

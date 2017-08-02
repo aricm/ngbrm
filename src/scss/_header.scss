@@ -46,3 +46,27 @@
         }
     }
 }
+
+.page-mast {
+    position: relative;
+    .mast-overlay {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.btn-page-mast {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff !important;
+    font-size: 1.25rem;
+    border-radius: 0;
+    &:hover {
+        background-color: rgba(white,0.2);
+    }
+
+}

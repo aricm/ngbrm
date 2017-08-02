@@ -58,3 +58,20 @@
 		text-align: right;
 	}
 }
+
+.affiliations {
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.5rem;
+	.aff {
+		text-align: center;
+		margin-bottom: 1.5rem;
+		a {
+			opacity: 0.75;
+			transition: opacity 0.2s ease-in-out;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
