@@ -67,3 +67,7 @@ function get_the_post_id() {
          }
   return $post_id;
 }
+
+
+
+include(STYLESHEETPATH.'/admin/custom_shortcodes.php');

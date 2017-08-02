@@ -22,7 +22,7 @@
             </nav><!-- #site-navigation -->
         </div>
         <div class="header-phone">
-            <a href="tel:18888966222">1-888-896-6222</a>
+            <strong><a href="tel:18888966222">1-888-896-6222</a></strong>
         </div>
         <div class="header-request">
             <a href="#">Request a Quote</a>

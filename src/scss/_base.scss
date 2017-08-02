@@ -1,27 +1,42 @@
 body {
     background-color: white;
     font-family: Arial, sans-serif;
+    font-size: 1.15rem;
     color: $textColor;
 }
 a, a:active, a:hover, a:visited, a:focus {
     text-decoration: none !important;
+    color: $secondaryColor;
+    transition: color 0.2s ease-in-out;
+}
+a:hover {
+    color: $primaryColor;
 }
 .h1, h1 {
     font-size: calc(2rem - 2px); // 30px
+    margin-bottom: 2rem;
 }
 .h2, h2 {
     font-size: calc(2rem - 7px); // 25px
+    margin-bottom: 1.5rem;
 }
 
 .h3, h3 {
     font-size: calc(2rem - 9px); // 23px
+    margin-bottom: 1.5rem;
 }
 
 .h4, h4 {
     font-size: calc(2rem - 12px); // 20px
+    margin-bottom: 1.5rem;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+h2, h3, h4,
+.h2, .h3, .h4 {
+    font-weight: bold;
 }
+
+// img {
+//     max-width: 100%;
+//     height: auto;
+// }

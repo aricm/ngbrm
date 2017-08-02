@@ -13,8 +13,9 @@
             </div>
         <?php endif; ?>
 
-        <?php the_content(); ?>
-
+        <div class="page-content">
+            <?php the_content(); ?>
+        </div>
     <?php endwhile; // End of the loop. ?>
 
 <?php

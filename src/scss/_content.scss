@@ -1,0 +1,55 @@
+.page-content,
+.blog-content {
+	padding: 3rem 0;
+	p {
+		margin-bottom: 2rem;
+	}
+}
+
+.page-title {
+	background: $secondaryColor;
+	h1 {
+		margin: 0;
+		padding: 1.5rem 1rem;
+		text-align: center;
+		color: white;
+	}
+}
+
+.homepage-hero {
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.checklist {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	li {
+		font-size: 1.3rem;
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+		img {
+			margin-right: 1.5rem;
+		}
+	}
+}
+
+.affiliation-list-item {
+    &:not(:last-child) {
+        margin-bottom: 5rem;
+    }
+    .logo {
+        flex-grow: 0;
+    }
+}
+
+.text-lg {
+	font-size: 1.2rem;
+}
