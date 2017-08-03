@@ -100,3 +100,36 @@ function nga_element($atts,$content){
 add_shortcode('element','nga_element');
 add_shortcode('element2','nga_element');
 add_shortcode('element3','nga_element');
+
+
+/*
+* ACCORDION (for FAQ)
+* Author: Bread M
+ */
+function nga_accordion($atts,$content) {
+    extract( shortcode_atts( array(
+        'title' => '',
+        'toggleicons' => '' //2 Font awesome classes, comma delimited, omitting the fa- (e.g: plus,minus) closedclass,openclass
+    ), $atts ) );
+
+    $content = do_shortcode( shortcode_unautop( $content ) );
+    $content = noParagraphs( $content );
+
+    $ao = '';
+    $ao .= '<div class="accordion-item">';
+
+    $icons = '';
+
+    if( isset($toggleicons) && $toggleicons != '' ) {
+        $toggleicons = explode(',',$toggleicons);
+        $icons = '<i class="fa fa-'.$toggleicons[0].'" data-open="'.$toggleicons[1].'" data-closed="'.$toggleicons[0].'"></i> ';
+    }
+        $ao .= '<h3 class="accordion-title">'.$icons.$title.'</h3>';
+        $ao .= '<div class="accordion-content">';
+            $ao .= $content;
+        $ao .= '</div>';
+    $ao .= '</div>';
+
+    return $ao;
+}
+add_shortcode('accordion_item','nga_accordion');

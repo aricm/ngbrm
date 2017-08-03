@@ -119,6 +119,99 @@
     }
 }
 
+.blurred-bg {
+	background: url(img/blurred-bg.jpg) no-repeat center center;
+	background-size: cover;
+	padding: 3rem 1rem;
+	margin-top: 5rem;
+}
+
+.page-footer-boxes {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	.box-item {
+		position: relative;
+		width: 300px;
+		height: 296px;
+		flex: 0 0 auto;
+		margin: 0.25rem;
+		font-size: 1.15rem;
+		font-weight: 600;
+		color: #282425;
+		background-color: rgba(white,0.25);
+		border: 2px solid rgba(white,0.9);
+		p {
+			margin: 0;
+			opacity: 0.9;
+		}
+	}
+	// Specific to "solutions" pages
+	&.regulation-boxes {
+		.box-item {
+			padding: 3rem 1.5rem 0 1.5rem;
+			.check {
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+			}
+		}
+	}
+	// Specific to "services" pages
+	&.certified-boxes {
+		.box-item {
+			margin: 0.5rem;
+			padding: 2.1rem 1.5rem 0 1.5rem;
+			font-size: 1.2rem;
+			.check {
+				text-align: center;
+				margin-bottom: 1.5rem;
+			}
+			&.img-only {
+				padding: 2rem 0;
+				text-align: center;
+			}
+		}
+	}
+
+}
+
+// FAQ
+.accordion-title {
+	font-size: 1.15rem;
+	cursor: pointer;
+	i {
+		color: $primaryColor;
+		opacity: 0.9;
+		margin-right: 0.5rem;
+		padding: 0.25rem 0.35rem;
+		font-weight: lighter;
+		font-size: 0.9rem;
+		border: 1px solid $lightGray;
+		vertical-align: text-top;
+	}
+}
+.accordion-content {
+	display: none;
+	color: $secondaryColor;
+	padding-left: 2rem;
+	font-size: 1rem !important;
+	&.open {
+		display: block;
+	}
+}
+
+
+.alignright {
+	float: right;
+	margin: 1rem 0 1rem 1rem;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .text-lg {
 	font-size: 1.2rem;
 }

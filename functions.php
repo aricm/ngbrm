@@ -25,7 +25,7 @@ if ( ! function_exists( 'ngbrm_setup' ) ) :
          *
          * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
          */
-        // register_nav_menus( array( 'primary' => 'primary menu' ) );
+        // register_nav_menus( array( 'services' => 'Document Storage' ) );
 
         /*
          * Switch default core markup for search form, comment form, and comments
@@ -47,12 +47,11 @@ add_action( 'after_setup_theme', 'ngbrm_setup' );
  * Enqueue scripts and styles.
  */
 function ngbrm_scripts() {
+    wp_enqueue_script( 'ngacustom', get_stylesheet_directory_uri() . '/js/ngbrm.js', 'jquery', '1.0', true );
     // override the shortcode plugin enqueue otherwise bootstrap comes after the site css, making overrides more cumbersome
     wp_enqueue_style( 'bootstrap', plugins_url() . '/bootstrap-4-wordpress-shortcodes/libraries/bootstrap-4.0.0/css/bootstrap.min.css',false );
     wp_enqueue_style( 'ngbrm_main', get_stylesheet_directory_uri() . '/ngbrm.css' );
     wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css' );
-    // wp_enqueue_style( 'ngstack-style', get_stylesheet_uri() );
-
 }
 add_action( 'wp_enqueue_scripts', 'ngbrm_scripts' );
 
