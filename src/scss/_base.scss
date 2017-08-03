@@ -3,7 +3,18 @@ body {
     font-family: Arial, sans-serif;
     font-size: 1.15rem;
     color: $textColor;
+    &.no-scroll {
+        position: absolute;
+        overflow: hidden;
+    }
 }
+@media screen and (min-width: 1200px) {
+    body.no-scroll {
+        position: static;
+        overflow: auto;
+    }
+}
+
 a, a:active, a:hover, a:visited, a:focus {
     text-decoration: none !important;
     color: $secondaryColor;

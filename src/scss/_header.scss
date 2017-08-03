@@ -3,11 +3,21 @@
     display: flex;
     justify-content: flex-end;
     padding: 0 !important;
+    background-color: #fff;
 }
 .header-logo {
     margin-right: auto;
     align-self: center;
     margin-left: 2.5rem;
+    max-width: 400px;
+    transition: all 0.2s ease-in-out;
+    .logo-brand {
+        display: none;
+    }
+    img {
+        max-width: 100%;
+        transition: all 0.2s ease-in-out;
+    }
 }
 .header-nav, .header-phone {
     // margin-right: 1rem;
@@ -29,12 +39,14 @@
 }
 .header-request {
     display: flex;
-    align-self: stretch;
+    text-align: center;
+    height: 100%;
     a {
         display: block;
-        align-self: stretch;
-        padding: 5.65rem 4.5rem 0 4.5rem;
         text-decoration: none !important;
+        padding: 5.65rem 0 0 0;
+        min-width: 350px;
+        height: 100%;
         font-size: 1.35rem;
         font-weight: 600;
         text-transform: uppercase;
@@ -44,6 +56,42 @@
         &:hover {
             background-color: $primaryColor;
         }
+    }
+}
+
+.sticky-header {
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99990;
+        box-shadow: 0 10px 20px rgba(black,0.2);
+        height: 100px;
+    }
+    .header-address {
+        display: none;
+    }
+    .header-phone {
+        margin-bottom: 0.25rem;
+    }
+    .header-info {
+        margin: 0.5rem 0 0 0;
+    }
+    .header-logo {
+        .logo-full {
+            display: none;
+        }
+        .logo-brand {
+            display: block;
+            max-width: 90px;
+        }
+    }
+    .header-nav-container {
+        margin: 0 0 0 1.5rem;
+    }
+    .main-nav {
+        font-size: 90%;
     }
 }
 

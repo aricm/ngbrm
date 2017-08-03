@@ -1,17 +1,24 @@
+.nav-toggle {
+    font-size: 3rem;
+}
+
 .main-nav {
     // All levels
     ul {
         list-style: none;
-        margin: 0 !important;
-        padding: 0 !important;
+        margin: 0;
+        padding: 0;
     }
     li {
+        position: relative;
+        padding: 0;
+        margin: 0;
         display: inline-block;
+        font-size: 20px;
     }
     a {
         display: block;
         color: #313036;
-        font-size: 20px;
         transition: all 0.2s ease-in-out;
         &:hover {
             color: $secondaryColor;
@@ -20,7 +27,240 @@
     // Top level
     > ul > li > a {
         padding: 1rem 0.5rem 3rem 0.5rem;
-        font-size: 23px;
+        font-size: 22px;
     }
 
+    // Hide nested menus
+    ul ul,
+    ul ul ul {
+        position: absolute;
+        left: -9999rem;
+        z-index: 10;
+        width: 250px;
+        background-color: white;
+        border: 1px solid #cccdce;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    }
+
+    // Change a couple things for nested menus
+    ul ul li {
+        font-size: 1rem;
+        display: block;
+        a {
+            padding: 0.5rem 1rem;
+        }
+    }
+
+    // Add arrow to top level menu items with children
+    > ul > li.menu-item-has-children {
+        > a {
+            padding-right: 1.5rem;
+            &:after {
+                content: "\f107";
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: inherit;
+                position: absolute;
+                top: 34%;
+                right: 0.2rem;
+                transform: translateY(-50%);
+                color: black;
+                font-size: 1rem;
+                z-index: 1;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    // Add arrow to nested menu items that have children
+    ul ul li.menu-item-has-children:after {
+        content: "\f105";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        color: black;
+        font-size: 1rem;
+        padding: 0 0.8rem;
+        z-index: 1;
+        opacity: 0.5;
+    }
+
+    // Align third level menu to top of second level link
+    ul ul ul {
+        top: 0;
+    }
+
+    // Show second level menu on first level hover
+    > ul > li:hover > ul {
+        left: 0;
+    }
+
+    // Show third level menu on second level hover
+    ul ul li:hover > ul {
+        left: 100%;
+    }
+
+    // Nested menu links hover + active
+    ul ul a:hover,
+    ul ul li.current-menu-item a {
+        background-color: $lightGray;
+    }
+
+    // Nav arrow/indicator on first nested menu
+    // WHY ISN'T THIS WORKING?!
+    > ul > ul > li:after {
+        content: "wtf";
+        // content: "\f0d8";
+        // font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        position: absolute;
+        top: -1px;
+        left: 1.5rem;
+        color: black;
+        font-size: 2rem;
+        z-index: 11;
+        box-shadow: -1px 0 0 1px #cccdce;
+    }
+}
+
+
+.close-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+    z-index: 99999;
+    background-color: darken($secondaryColor,15%);
+    border-bottom: 1px solid darken($secondaryColor,25%);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(-400px);
+    transition: transform 0.15s ease-in-out;
+    &.open {
+        max-width: 100%;
+        transform: translateX(0);
+    }
+}
+
+/****** MOBILE ******/
+
+@media screen and (max-width: 1199px) {
+    .header-nav {
+        text-align: right;
+    }
+    .main-nav {
+        will-change: transform;
+        padding-top: 45px;
+        box-shadow: 10px 0 20px rgba(black,0.2);
+        text-align: left;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 400px;
+        max-width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 99998;
+        background: $secondaryColor;
+        transform: translateX(-400px);
+        transition: transform 0.15s ease-in-out;
+        &.open {
+            // width: 400px;
+            max-width: 100%;
+            transform: translateX(0);
+        }
+        a {
+            color: lighten($secondaryColor,60%) !important;
+        }
+        // top level links
+        > ul > li > a {
+            padding: 1rem 0.5rem 3rem 0.5rem;
+            font-size: 1.15rem;
+        }
+        ul {
+            box-shadow: none !important;
+        }
+        ul, li {
+            position: static !important;
+            display: block !important;
+            width: auto !important;
+        }
+        ul ul,
+        ul ul ul {
+            background-color: $secondaryColor;
+            border: none;
+        }
+        li {
+            position: relative !important;
+        }
+        li > a {
+            padding: 0.5rem !important;
+            border-bottom: 1px solid darken($secondaryColor,3%) !important;
+            border-top: 1px solid lighten($secondaryColor,3%) !important;
+            &:hover {
+                background-color: lighten($secondaryColor,5%) !important;
+                color: #fff !important;
+                border-bottom: 1px solid darken($secondaryColor,10%) !important;
+                border-top: 1px solid lighten($secondaryColor,10%) !important;
+            }
+        }
+        > ul > li:not(:last-child):after { // lose the pipe
+            content: ' ';
+        }
+        ul ul li.menu-item-has-children:after {
+            content: " ";
+        }
+         ul li.menu-item-has-children > a { // down arrow
+            background-color: lighten($secondaryColor,5%);
+            &:after {
+                content: '\f107';
+                font-family: "FontAwesome";
+                position: absolute;
+                padding: 0 0.5rem;
+                top: 1.4rem;
+                right: 0;
+                opacity: 1;
+                color: #fff;
+            }
+        }
+         ul ul li.menu-item-has-children > a { // second level
+            background-color: lighten($secondaryColor,2%);
+            &:after {
+                top: 0.6rem;
+            }
+        }
+        li.current-menu-item > a {
+            background-color: darken($secondaryColor,5%) !important;
+            border-bottom: 1px solid darken($secondaryColor,10%) !important;
+            border-top: 1px solid lighten($secondaryColor,10%) !important;
+        }
+        > ul > li > ul > li:first-of-type { // lose the margin
+            margin-top: 0;
+        }
+        ul ul li a {
+            padding-left: 1.75rem !important;
+        }
+        ul ul ul li a {
+            padding-left: 3rem !important;
+            background-color: $secondaryColor !important;
+        }
+        .nav-call-to-action {
+            display: block;
+            margin-bottom: 0;
+            padding: 0.75rem 0 !important;
+        }
+    }
 }

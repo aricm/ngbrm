@@ -11,11 +11,12 @@
 <body <?php body_class(); ?>>
     <header class="container-fluid site-header" id="siteHeader">
         <div class="header-logo">
-            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/brm-logo.png" alt=""></a>
+            <a class="logo-full" href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/brm-logo.png" alt=""></a>
+            <a class="logo-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/brm.png" alt=""></a>
         </div>
         <div class="header-nav">
 
-            <a href="javascript:void(0);" id="navToggle" class="nav-toggle hidden-xl-up"><i class="fa fa-bars"></i></a>
+            <a href="javascript:void(0);" id="navToggle" class="nav-toggle"><i class="fa fa-bars"></i></a>
 
             <nav id="mainNav" class="main-nav" role="navigation">
                 <?php wp_nav_menu( array( 'theme_location' => 'main', 'container' => '' ) ); ?>
