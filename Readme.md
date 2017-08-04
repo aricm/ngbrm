@@ -47,7 +47,7 @@ Make sure you do not upload the *node_modules* directory via FTP
 
 Please make liberal use of the repo's issue tracker.
 
-Commit when you have fixed each issue
+Commit when you have fixed each issue *include the issue#*
 
 Always commit/push your changes with descriptive commit messages (unlike mine)
 
