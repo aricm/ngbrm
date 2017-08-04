@@ -41,7 +41,7 @@
 * *gulp* watches and compiles sass files
 * *gulp sass* does a manual compile without watching
 
-#### Additional Notes
+## Additional Notes
 
 Make sure you do not upload the *node_modules* directory via FTP
 
