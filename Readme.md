@@ -2,10 +2,10 @@
 #### BRM - brm-inc.com
 
 ## Theme
-* netStrap *(netgain repo)*
+#### netStrap *(netgain repo)*
 
 ## Child Theme
-* ngbrm
+#### ngbrm
 
 ## Plugins:
 * Contact Form 7
