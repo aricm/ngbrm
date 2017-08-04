@@ -18,7 +18,7 @@
 6. *npm install*
 
 ## GULP
-* 'gulp' watches and compiles sass file
-* 'gulp sass' does a manual compile without watching
+* *gulp* watches and compiles sass file
+* *gulp sass* does a manual compile without watching
 
 Make sure you do not upload the node_modules via FTP.
