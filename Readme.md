@@ -1,16 +1,20 @@
 # Site
+
 #### BRM - brm-inc.com
 
 
 ## Theme
+
 #### netStrap *(netgain repo)*
 
 
 ## Child Theme
+
 #### ngbrm
 
 
 ## Plugins:
+
 * Contact Form 7
 * Flamingo *to save form submissions to DB*
 * menu shortcode
@@ -20,6 +24,7 @@
 ## Instructions:
 
 #### Notes
+
 * If you haven't already, *npm install -g gulp* and *npm install -g gulp-cli*
 * The repo lives in the themes folder -- site > wp-content > themes > themeFolder
 
@@ -31,7 +36,8 @@
 5. *git pull origin master*
 6. *npm install*
 
-## GULP
+## Gulp
+
 * *gulp* watches and compiles sass files
 * *gulp sass* does a manual compile without watching
 
