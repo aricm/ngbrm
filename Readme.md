@@ -1,7 +1,16 @@
 # Site design for BRM - brm-inc.com
 
-### Theme folder name: *ngbrm*
+### Theme
+* netStrap
 
+### Child Theme
+* *ngbrm*
+
+### Plugins:
+* Contact Form 7
+* Flamingo *to save form submissions to DB
+* netStrap Shortcodes
+* menu shortcode
 
 #### Notes
 * If you haven't already, *npm install -g gulp* and *npm install -g gulp-cli*
