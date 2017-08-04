@@ -2,12 +2,12 @@
 
 ### Theme folder name: ngbrm
 
-## Instructions:
 
 #### Notes
 * If you haven't already, 'npm install -g gulp' and 'npm install -g gulp-cli'
 * The repo lives in the themes folder -- site > wp-content > themes > themeFolder
 
+## Instructions:
 
 1. Create directory 'ngbrm'
 ..* (if you are installing wordpress locally, this would be docroot > wp-content > themes > ngbrm)
