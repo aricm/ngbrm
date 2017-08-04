@@ -4,7 +4,7 @@
 * netStrap *(netgain repo)*
 
 ### Child Theme
-* *ngbrm*
+* ngbrm
 
 ### Plugins:
 * Contact Form 7
