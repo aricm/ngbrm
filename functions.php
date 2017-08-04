@@ -55,20 +55,27 @@ function ngbrm_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ngbrm_scripts' );
 
-/*
-* Utility Function
-*
-* Mainly used to get the post id of a page outside of the loop in a page template
- */
-function get_the_post_id() {
-  if (in_the_loop()) {
-       $post_id = get_the_ID();
-  } else {
-       global $wp_query;
-       $post_id = $wp_query->get_queried_object_id();
-         }
-  return $post_id;
+function ld_new_excerpt_more($more) {
+    global $post;
+    return '...<a class="more-link" href="'. get_permalink($post->ID) . '"><em>More</em></a>';
 }
+add_filter('excerpt_more', 'ld_new_excerpt_more');
+
+/**
+ * Register widgetized areas.
+ *
+ */
+function ngbrm_widget_init() {
+
+    register_sidebar( array(
+        'name'          => 'Page Sidebar',
+        'id'            => 'page_sidebar_1',
+        'before_widget' => '<div class="sb-widget-area">',
+        'after_widget'  => '</div>'
+    ) );
+
+}
+add_action( 'widgets_init', 'ngbrm_widget_init' );
 
 
 /**
@@ -77,7 +84,7 @@ function get_the_post_id() {
  */
 
 function add_page_mast_meta_box($post) {
-    add_meta_box('page_mast_meta_box', 'Page Mast Titles', 'page_mast_metabox_html_function', 'page', 'normal', 'default');
+    add_meta_box('page_mast_meta_box', 'Page Mast Titles', 'page_mast_metabox_html_function', array('page','post'), 'normal', 'default');
 }
 add_action('admin_init','add_page_mast_meta_box');
 
@@ -115,7 +122,7 @@ function page_mast_metabox_html_function($post){
 add_action('save_post','save_page_mast_meta', 10, 2);
 
 function save_page_mast_meta($post_id, $post){
-    if ( $post->post_type == 'page' ) {
+    if ( $post->post_type == 'page' || $post->post_type == 'post' ) {
         if (isset($_POST['mast_meta_flag'])) {
             updateifstatement('mast_page_title', $post_id);
             updateifstatement('mast_section_title', $post_id);
@@ -131,5 +138,19 @@ function updateifstatement($fieldname, $postid) {
     }
 }
 
+/*
+* Utility Function
+*
+* Mainly used to get the post id of a page outside of the loop in a page template
+ */
+function get_the_post_id() {
+  if (in_the_loop()) {
+       $post_id = get_the_ID();
+  } else {
+       global $wp_query;
+       $post_id = $wp_query->get_queried_object_id();
+         }
+  return $post_id;
+}
 
 include(STYLESHEETPATH.'/admin/custom_shortcodes.php');
