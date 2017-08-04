@@ -18,7 +18,7 @@
 6. *npm install*
 
 ## GULP
-* *gulp* watches and compiles sass file
+* *gulp* watches and compiles sass files
 * *gulp sass* does a manual compile without watching
 
 Make sure you do not upload the node_modules via FTP, and always commit/push your changes with descriptive commit messages (unlike mine)
