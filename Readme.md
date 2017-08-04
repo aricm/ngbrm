@@ -1,7 +1,7 @@
 # Site design for BRM - brm-inc.com
 
 ### Theme
-* netStrap
+* netStrap *(netgain repo)*
 
 ### Child Theme
 * *ngbrm*
@@ -9,8 +9,8 @@
 ### Plugins:
 * Contact Form 7
 * Flamingo *to save form submissions to DB
-* netStrap Shortcodes
 * menu shortcode
+* netStrap Shortcodes *(netgain repo)*
 
 #### Notes
 * If you haven't already, *npm install -g gulp* and *npm install -g gulp-cli*
