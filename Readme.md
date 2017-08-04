@@ -8,7 +8,7 @@
 
 ### Plugins:
 * Contact Form 7
-* Flamingo *to save form submissions to DB
+* Flamingo *to save form submissions to DB*
 * menu shortcode
 * netStrap Shortcodes *(netgain repo)*
 
