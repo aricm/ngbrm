@@ -51,4 +51,4 @@ Commit when you have fixed each issue
 
 Always commit/push your changes with descriptive commit messages (unlike mine)
 
- *Kthnx*
+ *~Kthnx*
