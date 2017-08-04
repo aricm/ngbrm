@@ -1,12 +1,13 @@
-# Site design for BRM - brm-inc.com
+# Site
+## BRM - brm-inc.com
 
-### Theme
+## Theme
 * netStrap *(netgain repo)*
 
-### Child Theme
+## Child Theme
 * ngbrm
 
-### Plugins:
+## Plugins:
 * Contact Form 7
 * Flamingo *to save form submissions to DB*
 * menu shortcode
