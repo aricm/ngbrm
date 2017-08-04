@@ -43,6 +43,8 @@
 
 #### Additional Notes
 
-Make sure you do not upload the node_modules via FTP, and always commit/push your changes with descriptive commit messages (unlike mine)
+Make sure you do not upload the *node_modules* directory via FTP
+
+Always commit/push your changes with descriptive commit messages (unlike mine)
 
 Please make liberal use of the repo's issue tracker. Kthnx.
