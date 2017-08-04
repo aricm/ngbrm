@@ -32,6 +32,35 @@ select {
     color: lighten($darkGray,10%);
 }
 
+.contact-us-form {
+    max-width: 20rem;
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="password"],
+    input[type="number"],
+    input[type="search"],
+    textarea {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: white;
+        border: 2px solid darken($lightGray,20%);
+        font-size: 1.25rem;
+    }
+    p {
+        margin-bottom: 1.25rem !important;
+    }
+    .submit-container {
+        .btn {
+            padding: 0.75rem 4rem;
+            font-size: 1.15rem;
+        }
+    }
+    ::-webkit-input-placeholder {
+        color: darken($lightGray,20%);
+    }
+}
 
 .footer-form {
     display: flex;
@@ -60,5 +89,40 @@ select {
         background-color: #e8e8ea;
         border-color: #e8e8ea;
         font-size: 1.15rem;
+    }
+}
+
+.payment-form {
+    max-width: 25rem;
+    select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="password"],
+    input[type="number"],
+    input[type="search"],
+    textarea {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: white;
+        border: 1px solid darken($lightGray,20%);
+        font-size: 1.25rem;
+    }
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+    .submit-container {
+        .btn {
+            padding: 0.75rem 4rem;
+            font-size: 1.15rem;
+        }
+    }
+    br {
+        display: none;
+    }
+    ::-webkit-input-placeholder {
+        color: darken($lightGray,20%);
     }
 }

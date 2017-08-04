@@ -178,7 +178,7 @@
 
 // FAQ
 .accordion-title {
-	font-size: 1.15rem;
+	font-size: 1.25rem;
 	cursor: pointer;
 	i {
 		color: $primaryColor;
@@ -195,13 +195,78 @@
 	display: none;
 	color: $secondaryColor;
 	padding-left: 2rem;
-	font-size: 1rem !important;
+	font-size: 1.1rem !important;
+	a {
+		color: $textColor !important;
+		&:hover {
+			color: $primaryColor !important;
+		}
+	}
 	&.open {
 		display: block;
 	}
 }
 
+// Adjust bottom padding on the contact page
+.page-id-15 {
+	.page-content {
+		padding-bottom: 1rem;
+	}
+}
+.contact-us-info {
+	h3 {
+		margin-bottom: 0.25rem !important;
+	}
+	p {
+		margin-bottom: 3rem;
+	}
+}
 
+.contact-us-map {
+	display: flex;
+	padding: 0 !important;
+	p {
+		width: 100%;
+		height: 100%;
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.contact-us-form-container {
+	background-color: $lightGray;
+	padding: 2rem 1rem 1rem 8rem;
+}
+
+// Doc shredding -> drop-off
+.drop-off-map {
+	display: flex;
+	iframe {
+		width: 100%;
+	}
+	p {
+		width: 100%;
+		height: 100%;
+		margin: 0 !important;
+	}
+}
+// Adjust margin for the above page's blurred-bg
+.page-id-157 {
+	.blurred-bg {
+		margin-top: 0;
+	}
+}
+
+// Ignore those stragglers
+main p:last-child {
+	margin: 0 !important;
+}
+
+.alignleft {
+	float: left;
+	margin: 1rem 1rem 1rem 0;
+}
 .alignright {
 	float: right;
 	margin: 1rem 0 1rem 1rem;
@@ -210,6 +275,10 @@
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.bg-light-gray {
+	background-color: $lightGray;
 }
 
 .text-lg {

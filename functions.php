@@ -25,7 +25,7 @@ if ( ! function_exists( 'ngbrm_setup' ) ) :
          *
          * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
          */
-        // register_nav_menus( array( 'services' => 'Document Storage' ) );
+        register_nav_menus( array( 'services' => 'Service Pages' ) );
 
         /*
          * Switch default core markup for search form, comment form, and comments
