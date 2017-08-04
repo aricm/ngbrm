@@ -1,6 +1,6 @@
 # Site design for BRM - brm-inc.com
 
-### Theme folder name: ngbrm
+### Theme folder name: *ngbrm*
 
 
 #### Notes
