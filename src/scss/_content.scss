@@ -214,7 +214,7 @@
 	h3 {
 		margin-bottom: 0.25rem !important;
 	}
-	p {
+	.col {
 		margin-bottom: 3rem;
 	}
 }
@@ -230,10 +230,6 @@
 			height: 100%;
 		}
 	}
-}
-.contact-us-form-container {
-	background-color: $lightGray;
-	padding: 2rem 1rem 1rem 8rem;
 }
 
 // Doc shredding -> drop-off
@@ -274,7 +270,32 @@ main p:last-child {
 	margin-right: auto;
 }
 
-@media screen and (max-width: 990px) {
+.bg-light-gray {
+	background-color: $lightGray;
+}
+
+.text-lg {
+	font-size: 1.2rem;
+}
+
+@media screen and (max-width: 660px) {
+    .home-cards {
+        .home-card {
+            flex: 1 0 100%;
+            margin: 0.25rem 0 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+	.contact-us-info {
+		h3 {
+			font-size: 1.15rem;
+		}
+		p {
+			font-size: 1rem;
+		}
+	}
 	.alignleft,
 	.alignright {
 		float: none;
@@ -286,10 +307,5 @@ main p:last-child {
 	}
 }
 
-.bg-light-gray {
-	background-color: $lightGray;
-}
-
-.text-lg {
-	font-size: 1.2rem;
+@media screen and (max-width: 767px) {
 }

@@ -8,9 +8,11 @@
 .header-logo {
     margin-right: auto;
     align-self: center;
+    flex: 0;
     margin-left: 2.5rem;
-    max-width: 400px;
     transition: all 0.2s ease-in-out;
+    max-width: 400px;
+    min-width: 300px;
     .logo-brand {
         img {
             width: 0;
@@ -27,8 +29,14 @@
 .header-nav, .header-phone {
     // margin-right: 1rem;
 }
+.header-block {
+    align-self: flex-end;
+    display: flex;
+    // flex: 1;
+}
 .header-nav, .header-phone, .header-request {
     align-self: flex-end;
+    // margin-left: auto;
 }
 .header-phone {
     a {
@@ -86,6 +94,7 @@
         margin: 0.5rem 0 0 0;
     }
     .header-logo {
+        min-width: 70px;
         .logo-full {
             display: none;
         }
@@ -156,12 +165,146 @@
     }
 }
 
+@media screen and (max-width: 1800px) {
+    .header-block {
+        flex-flow: column wrap;
+        margin-right: 1rem;
+    }
+    .header-phone {
+        a {
+            padding: 0;
+            margin: 0.5rem 1.5rem 0.5rem 0;
+        }
+    }
+    .header-nav {
+        order: 2;
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    body:not(.sticky-header) .header-logo {
+        min-width: 200px;
+    }
+    .main-nav {
+        li {
+            font-size: 1rem;
+        }
+        > ul > li > a {
+            font-size: 18px !important;
+        }
+    }
+}
+@media screen and (max-width: 1300px) {
+    .header-request {
+        a {
+            min-width: 200px;
+            font-size: 1.15rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .sticky-header {
+        .header-block {
+            flex-direction: column;
+            margin-right: 1.5rem;
+        }
+        .header-nav {
+            order: 2;
+        }
+        .main-nav {
+            > ul > li > a {
+                padding-bottom: 0.5rem;
+                padding-top: 0.15rem;
+            }
+            > ul > li.menu-item-has-children > a:after {
+                top: 40%;
+            }
+        }
+        .header-phone {
+            margin-bottom: 0;
+            a {
+                padding: 0;
+                margin-right: 1.75rem;
+                margin-bottom: 0;
+            }
+        }
+        .header-request {
+            a {
+                padding-top: 1.6rem;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1199px) {
     .home-page-mast {
         .mast-overlay {
             left: 50%;
             width: 96%;
             transform: translate(-50%, -50%);
+        }
+    }
+    body:not(.sticky-header) .header-logo {
+        min-width: 360px;
+        max-width: 360px;
+    }
+    .header-block {
+        align-self: center;
+    }
+    .header-nav {
+        text-align: left;
+    }
+    .nav-toggle {
+        margin: 0 1rem 0 0;
+    }
+    .sticky-header {
+        .header-block {
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-right: 2rem;
+            align-items: center;
+        }
+        .header-nav {
+            flex: 0;
+        }
+        .header-phone {
+            margin-bottom: 0.75rem;
+        }
+        .header-request {
+            a {
+                padding-top: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    body:not(.sticky-header) .header-logo {
+        min-width: 200px;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .page-mast {
+        h1 {
+            font-size: 1.5rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+        }
+        .btn-page-mast {
+            font-size: 1.1rem;
+            padding: 0.5rem 1.5rem;
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    .page-mast {
+        h2 {
+            display: none;
         }
     }
 }

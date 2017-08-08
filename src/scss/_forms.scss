@@ -32,6 +32,11 @@ select {
     color: lighten($darkGray,10%);
 }
 
+.contact-us-form-container {
+    background-color: $lightGray;
+    padding: 2rem 1rem 1rem 8rem;
+}
+
 .contact-us-form {
     max-width: 20rem;
     select,
@@ -124,5 +129,33 @@ select {
     }
     ::-webkit-input-placeholder {
         color: darken($lightGray,20%);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .contact-us-map {
+        order: 2;
+        min-height: 300px;
+    }
+    .contact-us-form-container {
+        padding: 2rem;
+    }
+    .contact-us-form {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        max-width: none;
+        p {
+            flex: 1 0 45%;
+            margin: 0 1rem 1rem 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer-form {
+        p {
+            flex: 0 0 49%;
+        }
     }
 }

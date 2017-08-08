@@ -75,3 +75,24 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1199px) {
+	.affiliations {
+		margin-bottom: 2.5rem;
+		justify-content: center;
+		.aff {
+			margin: 0.5rem;
+		}
+	}
+	.primary-footer {
+		justify-content: center;
+		> div {
+			margin: 1rem;
+		}
+	}
+	.site-footer {
+		.copyright {
+			flex-direction: column;
+		}
+	}
+}
