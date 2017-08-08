@@ -5,6 +5,7 @@
 .main-nav {
     // All levels
     ul {
+        position: relative;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -29,7 +30,11 @@
         padding: 1rem 0.5rem 3rem 0.5rem;
         font-size: 22px;
     }
-
+    // Active top level
+    > ul > li.current-menu-item > a,
+    > ul > li.current-menu-ancestor > a {
+        color: $secondaryColor;
+    }
     // Hide nested menus
     ul ul,
     ul ul ul {
@@ -46,8 +51,12 @@
     ul ul li {
         font-size: 1rem;
         display: block;
+        margin-top: 0.5rem;
         a {
             padding: 0.5rem 1rem;
+            border: 1px solid transparent;
+            border-left: none;
+            border-right: none;
         }
     }
 
@@ -93,7 +102,7 @@
 
     // Align third level menu to top of second level link
     ul ul ul {
-        top: 0;
+        top: -1px; // since we have a 1px border, otherwise 0
     }
 
     // Show second level menu on first level hover
@@ -108,26 +117,35 @@
 
     // Nested menu links hover + active
     ul ul a:hover,
-    ul ul li.current-menu-item a {
-        background-color: $lightGray;
+    ul ul li.current-menu-ancestor > a,
+    ul ul li.current-menu-item > a {
+        background-color: lighten($lightGray,3%);
+        border-color: #fff;
+        color: $secondaryColor;
     }
 
-    // Nav arrow/indicator on first nested menu
-    // WHY ISN'T THIS WORKING?!
-    > ul > ul > li:after {
-        content: "wtf";
-        // content: "\f0d8";
-        // font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
+    // Arrow at the top of second level menus
+    > ul > li.menu-item-has-children > ul:before,
+    > ul > li.menu-item-has-children > ul:after {
         position: absolute;
-        top: -1px;
-        left: 1.5rem;
-        color: black;
-        font-size: 2rem;
-        z-index: 11;
-        box-shadow: -1px 0 0 1px #cccdce;
+        bottom: 100%;
+        top: -21px;
+        left: 40px;
+        display: block;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        content: " ";
+        border-color: transparent;
+        border-style: solid;
+        border-width: 10px;
+        border-bottom-color: inherit;
+    }
+    > ul > li.menu-item-has-children > ul:after {
+       border-bottom-color: #fff;
+       border-width: 9px;
+       top: -18px;
+       left: 41px;
     }
 }
 
@@ -257,10 +275,10 @@
             padding-left: 3rem !important;
             background-color: $secondaryColor !important;
         }
-        .nav-call-to-action {
-            display: block;
-            margin-bottom: 0;
-            padding: 0.75rem 0 !important;
+        // Get rid of the top arrow on second-level menus
+        > ul > li.menu-item-has-children > ul:before,
+        > ul > li.menu-item-has-children > ul:after {
+            display: none;
         }
     }
 }

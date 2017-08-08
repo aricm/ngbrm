@@ -7,7 +7,7 @@
             $primaryTitle = get_post_meta( get_the_ID(), 'mast_page_title', true );
             $sectionTitle = get_post_meta( get_the_ID(), 'mast_section_title', true );
             if( empty($primaryTitle) ) {
-                $primaryTitle = "storage. scanning. shredding.";
+                $primaryTitle = "storage. scanning. shredding";
             }
             if( empty($sectionTitle) ) {
                 $sectionTitle = get_the_title();

@@ -2,7 +2,7 @@
 .blog-content {
 	padding: 3rem 0;
 	p {
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 	}
 }
 
@@ -13,13 +13,6 @@
 		padding: 1.5rem 1rem;
 		text-align: center;
 		color: white;
-	}
-}
-
-.homepage-hero {
-	img {
-		max-width: 100%;
-		height: auto;
 	}
 }
 
@@ -54,6 +47,10 @@
 		overflow: hidden;
 		&:nth-child(2) {
 			margin: 0 0.5rem;
+		}
+		img {
+		    animation: move 12s ease;
+		    animation-fill-mode: forwards;
 		}
 		.overlay {
 			position: absolute;
@@ -275,6 +272,18 @@ main p:last-child {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@media screen and (max-width: 990px) {
+	.alignleft,
+	.alignright {
+		float: none;
+		margin: 1rem auto;
+		text-align: center;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .bg-light-gray {

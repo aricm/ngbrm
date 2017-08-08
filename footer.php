@@ -43,7 +43,7 @@
                 <a href="http://www.aiim.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-aiim.png" alt=""></a>
             </div>
             <div class="aff">
-                <a style="cursor: default;" href="javascript:void(0)" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-nrc.png" alt=""></a>
+                <a href="https://www.nationalrecordscenters.com/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-nrc.png" alt=""></a>
             </div>
             <div class="aff">
                 <a href="http://www.prismintl.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-prism.png" alt=""></a>

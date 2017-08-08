@@ -12,7 +12,12 @@
     max-width: 400px;
     transition: all 0.2s ease-in-out;
     .logo-brand {
-        display: none;
+        img {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.2s ease-in-out;
+        }
     }
     img {
         max-width: 100%;
@@ -67,10 +72,12 @@
         width: 100%;
         z-index: 99990;
         box-shadow: 0 10px 20px rgba(black,0.2);
-        height: 100px;
+        height: 80px;
     }
-    .header-address {
-        display: none;
+    .header-request {
+        a {
+            padding-top: 1rem;
+        }
     }
     .header-phone {
         margin-bottom: 0.25rem;
@@ -83,8 +90,10 @@
             display: none;
         }
         .logo-brand {
-            display: block;
-            max-width: 90px;
+            img {
+                width: 70px;
+                height: auto;
+            }
         }
     }
     .header-nav-container {
@@ -105,16 +114,54 @@
         text-align: center;
         color: #fff;
     }
+    h1 {
+        font-size: 2.65rem;
+        font-weight: bold;
+    }
+    h2 {
+        font-style: italic;
+        font-weight: normal;
+        margin-bottom: 2.5rem;
+    }
 }
 
 .btn-page-mast {
-    background-color: transparent;
+    background-color: rgba(black,0.2);
     border: 2px solid #fff;
     color: #fff !important;
     font-size: 1.25rem;
     border-radius: 0;
+    padding: 0.9rem 2.5rem;
     &:hover {
         background-color: rgba(white,0.2);
     }
 
+}
+
+.home-page-mast {
+    max-height: 650px;
+    overflow: hidden;
+    img {
+        animation: move 7s ease;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes move {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .home-page-mast {
+        .mast-overlay {
+            left: 50%;
+            width: 96%;
+            transform: translate(-50%, -50%);
+        }
+    }
 }

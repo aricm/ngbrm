@@ -11,7 +11,7 @@
             $primaryTitle = get_post_meta( get_the_ID(), 'mast_page_title', true );
             $sectionTitle = get_post_meta( get_the_ID(), 'mast_section_title', true );
             if( empty($primaryTitle) ) {
-                $primaryTitle = "storage. scanning. shredding.";
+                $primaryTitle = "storage. scanning. shredding";
             }
             if( empty($sectionTitle) ) {
                 $sectionTitle = the_title();
@@ -19,7 +19,7 @@
         ?>
 
         <?php if( has_post_thumbnail() ): ?>
-            <div class="page-mast">
+            <div class="page-mast home-page-mast">
                 <?php the_post_thumbnail(); ?>
                 <div class="mast-overlay">
                     <h1><?php echo $primaryTitle; ?></h1>

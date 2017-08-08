@@ -11,8 +11,8 @@
 <body <?php body_class(); ?>>
     <header class="container-fluid site-header" id="siteHeader">
         <div class="header-logo">
-            <a class="logo-full" href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/brm-logo.png" alt=""></a>
-            <a class="logo-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/brm.png" alt=""></a>
+            <a class="logo-full" title="Business Records Management" href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/brm-logo.png" alt=""></a>
+            <a class="logo-brand" title="Business Records Management" href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/brm.png" alt=""></a>
         </div>
         <div class="header-nav">
 

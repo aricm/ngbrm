@@ -23,6 +23,8 @@
         <div class="col col-12 col-md-9">
 
             <div class="blog-listing">
+            <h1><?php echo single_cat_title(); ?> <small class="text-muted">News Posts</small></h1>
+
             <?php while ( have_posts() ) : the_post(); ?>
                 <article>
 
