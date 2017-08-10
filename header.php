@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="header-request">
-            <a href="<?php echo home_url('/contact/'); ?>">Request a Quote</a>
+            <a href="<?php echo home_url('/contact/'); ?>"><span>Request a Quote</span></a>
         </div>
     </header>
 

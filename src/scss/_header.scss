@@ -8,11 +8,12 @@
 .header-logo {
     margin-right: auto;
     align-self: center;
-    flex: 0;
+    flex: 1;
     margin-left: 2.5rem;
+    padding-right: 1.5rem;
     transition: all 0.2s ease-in-out;
     max-width: 400px;
-    min-width: 300px;
+    // min-width: 300px;
     .logo-brand {
         img {
             width: 0;
@@ -184,7 +185,7 @@
 
 @media screen and (max-width: 1520px) {
     body:not(.sticky-header) .header-logo {
-        min-width: 200px;
+        // min-width: 200px;
     }
     .main-nav {
         li {
@@ -247,8 +248,8 @@
         }
     }
     body:not(.sticky-header) .header-logo {
-        min-width: 360px;
-        max-width: 360px;
+        // min-width: 360px;
+        // max-width: 360px;
     }
     .header-block {
         align-self: center;
@@ -282,8 +283,8 @@
 
 @media screen and (max-width: 860px) {
     body:not(.sticky-header) .header-logo {
-        min-width: 200px;
-        max-width: 300px;
+        // min-width: 200px;
+        // max-width: 300px;
     }
 }
 
