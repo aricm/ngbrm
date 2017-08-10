@@ -278,13 +278,17 @@ main p:last-child {
 	font-size: 1.2rem;
 }
 
-@media screen and (max-width: 660px) {
-    .home-cards {
-        .home-card {
-            flex: 1 0 100%;
-            margin: 0.25rem 0 !important;
-        }
-    }
+@media screen and (max-width: 1199px) {
+	.home-cards {
+	    .home-card:hover {
+	        h2 {
+	        	top: 35%;
+	        }
+	        .btn-container {
+	        	top: 43%;
+	        }
+	    }
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -294,6 +298,34 @@ main p:last-child {
 		}
 		p {
 			font-size: 1rem;
+		}
+	}
+	.home-cards {
+	    .home-card {
+	        .overlay {
+	        	background-color: rgba(black,0.35) !important;
+	        }
+	        h2 {
+	        	font-size: 90%;
+	        	left: 50%;
+	        	top: 35%;
+	        }
+	        .btn-container {
+	        	left: 50%;
+	        	top: 43%;
+	        	.btn-page-mast {
+	        		font-size: 90%;
+	        		padding: 0.5rem 1.5rem;
+	        	}
+	        }
+	    }
+	}
+	.page-menu {
+		font-size: 1rem !important;
+		li:after {
+			padding: 0 0.5rem;
+			opacity: 0.35;
+
 		}
 	}
 	.alignleft,
@@ -307,5 +339,27 @@ main p:last-child {
 	}
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 660px) {
+    .home-cards {
+        .home-card {
+            flex: 1 0 100%;
+            margin: 0.25rem 0 !important;
+            .overlay {
+            	background-color: rgba(black,0.35) !important;
+            }
+            h2 {
+            	font-size: 1.5rem;
+            	left: 50%;
+            	top: 35%;
+            }
+            .btn-container {
+            	left: 50%;
+            	top: 43%;
+            	.btn-page-mast {
+            		font-size: 1.25rem;
+            		padding: 0.9rem 2.5rem;
+            	}
+            }
+        }
+    }
 }

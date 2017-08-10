@@ -19,7 +19,7 @@
         ?>
 
         <?php if( has_post_thumbnail() ): ?>
-            <div class="page-mast home-page-mast">
+            <div class="mast page-mast home-page-mast">
                 <?php the_post_thumbnail(); ?>
                 <div class="mast-overlay">
                     <h1><?php echo $primaryTitle; ?></h1>

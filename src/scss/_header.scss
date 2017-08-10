@@ -8,11 +8,12 @@
 .header-logo {
     margin-right: auto;
     align-self: center;
-    flex: 0;
+    flex: 1;
     margin-left: 2.5rem;
+    padding-right: 1.5rem;
     transition: all 0.2s ease-in-out;
     max-width: 400px;
-    min-width: 300px;
+    // min-width: 300px;
     .logo-brand {
         img {
             width: 0;
@@ -51,8 +52,8 @@
     }
 }
 .header-request {
-    display: flex;
     text-align: center;
+    overflow: hidden;
     height: 100%;
     a {
         display: block;
@@ -70,6 +71,13 @@
             background-color: $primaryColor;
         }
     }
+}
+.header-request-icon {
+    display: none;
+    font-size: 3rem;
+    margin-right: 1rem;
+    position: relative;
+    top: -2px;
 }
 
 .sticky-header {
@@ -113,7 +121,7 @@
     }
 }
 
-.page-mast {
+.mast {
     position: relative;
     .mast-overlay {
         position: absolute;
@@ -184,7 +192,7 @@
 
 @media screen and (max-width: 1520px) {
     body:not(.sticky-header) .header-logo {
-        min-width: 200px;
+        // min-width: 200px;
     }
     .main-nav {
         li {
@@ -246,9 +254,23 @@
             transform: translate(-50%, -50%);
         }
     }
+    .page-mast {
+        h1 {
+            font-size: 1.75rem;
+            margin-bottom: 1.75rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-page-mast {
+            font-size: 1.15rem;
+            padding: 0.75rem 2rem;
+        }
+    }
     body:not(.sticky-header) .header-logo {
-        min-width: 360px;
-        max-width: 360px;
+        // min-width: 360px;
+        // max-width: 360px;
     }
     .header-block {
         align-self: center;
@@ -280,31 +302,138 @@
     }
 }
 
-@media screen and (max-width: 860px) {
-    body:not(.sticky-header) .header-logo {
-        min-width: 200px;
-        max-width: 300px;
-    }
-}
-
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 991px) {
     .page-mast {
         h1 {
             font-size: 1.5rem;
+            margin-bottom: 1.25rem;
         }
         h2 {
             font-size: 1.25rem;
+            margin-bottom: 1rem;
         }
         .btn-page-mast {
-            font-size: 1.1rem;
+            font-size: 1rem;
             padding: 0.5rem 1.5rem;
         }
     }
 }
-@media screen and (max-width: 640px) {
+
+@media screen and (max-width: 860px) {
+
+}
+
+@media screen and (max-width: 790px) {
+    .page-title {
+        h1 {
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+    }
     .page-mast {
+        height: 200px;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 1000px;
+            opacity: 0.35;
+        }
+        &:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
         h2 {
-            display: none;
+            // display: none;
+        }
+    }
+}
+@media screen and (max-width: 719px) {
+    .header-request {
+        display: none;
+    }
+    .header-request-icon {
+        display: inline-block;
+    }
+    body.sticky-header {
+        .header-nav {
+            flex: 1;
+        }
+        .nav-toggle {
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .home-page-mast {
+        height: 300px;
+        img {
+            position: absolute;
+            top: -15px;
+            left: -340px;
+            max-width: 1000px;
+        }
+    }
+}
+
+@media screen and (max-width: 529px) {
+    .header-block {
+        flex-direction: row;
+        align-items: center;
+    }
+    .header-nav {
+        text-align: right;
+        align-self: center;
+        flex: 1;
+    }
+    .header-phone {
+        align-self: center;
+        flex: 1;
+        a {
+            font-size: 1.25rem;
+            margin: 0 0 0 1rem;
+        }
+    }
+
+    body:not(.sticky-header) {
+        .site-header {
+            flex-flow: row wrap;
+            height: auto;
+            text-align: center !important;
+        }
+        .header-logo {
+            max-width: 240px;
+            margin: 0.5rem auto;
+            padding: 0;
+            .logo-brand {
+                display: none;
+            }
+        }
+        .header-block {
+            flex: 1 0 100%;
+        }
+    }
+    body.sticky-header {
+        .header-block {
+            flex: 6;
+            margin: 0 !important;
+        }
+        .header-phone {
+            flex: 2;
+            margin-bottom: 0 !important;
+            text-align: center;
+        }
+        .nav-toggle,
+        .header-request-icon {
+            font-size: 2rem !important;
+            margin-right: 0.5rem !important;
         }
     }
 }

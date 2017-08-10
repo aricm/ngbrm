@@ -57,11 +57,29 @@ select {
         margin-bottom: 1.25rem !important;
     }
     .submit-container {
+        display: flex;
+        width: 100%;
+        flex-flow: column wrap;
+        p {
+            margin: 17px 0 0 !important;
+            flex: 0;
+            padding-left: 3px;
+        }
+        > .wpcf7-form-control-wrap {
+            flex: 0;
+        }
+        .page-recaptcha {
+            transform: scale(0.8);
+            position: relative;
+            left: -31px;
+        }
         .btn {
             padding: 0.75rem 4rem;
             font-size: 1.15rem;
         }
     }
+    // .submit-container {
+    // }
     ::-webkit-input-placeholder {
         color: darken($lightGray,20%);
     }
@@ -70,10 +88,29 @@ select {
 .footer-form {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
     padding-top: 2rem;
+    padding-left: 0.75rem;
     p {
-        flex: 0 0 33%;
+        flex: 0 0 32%;
+        margin: 0.25rem;
+    }
+    // reCaptcha
+    > .wpcf7-form-control-wrap {
+        // width: 367px;
+        // flex: 1;
+        // background-color: #e8e8ea;
+        // height: 48px;
+        // overflow: hidden;
+        top: -14px;
+        margin: 0.25rem 0 0 0.25rem;
+    }
+    .footer-recaptcha {
+        transform: scale(0.63);
+        position: relative;
+        width: 191px;
+        left: -35px;
+        // top: -14px;
     }
     .submit-container {
         flex: 1 0 100%;
@@ -119,6 +156,8 @@ select {
         font-weight: bold;
     }
     .submit-container {
+        margin-top: 1.5rem;
+        margin-bottom: 0;
         .btn {
             padding: 0.75rem 4rem;
             font-size: 1.15rem;
@@ -152,10 +191,27 @@ select {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .container {
+        // width: 100%;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .footer-form {
         p {
-            flex: 0 0 49%;
+            flex: 0 0 48%;
+        }
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .footer-form {
+        p {
+            flex: 1 0 100%;;
+        }
+        > .wpcf7-form-control-wrap {
+            top: 0
         }
     }
 }
