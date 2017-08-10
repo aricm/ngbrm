@@ -9,7 +9,7 @@
         $primaryTitle = "storage. scanning. shredding.";
     }
 ?>
-<div class="page-mast">
+<div class="mast page-mast">
     <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/08/mast-truck.jpg" alt="">
     <div class="mast-overlay">
         <h1><?php echo $primaryTitle; ?></h1>

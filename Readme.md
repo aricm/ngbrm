@@ -19,6 +19,7 @@
 * Flamingo *to save form submissions to DB*
 * menu shortcode
 * netStrap Shortcodes *(netgain repo)*
+* iThemes Security
 
 
 ## Instructions:

@@ -14,12 +14,12 @@
             }
         ?>
 
-        <div class="page-mast">
+        <div class="mast page-mast">
             <?php
             if( has_post_thumbnail() ) {
                 the_post_thumbnail();
             } else {
-                echo '<img width="2000" height="400" src="http://brm.dev:81/wp-content/uploads/2017/08/mast-services.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://brm.dev:81/wp-content/uploads/2017/08/mast-services.jpg 2000w, http://brm.dev:81/wp-content/uploads/2017/08/mast-services-300x60.jpg 300w, http://brm.dev:81/wp-content/uploads/2017/08/mast-services-768x154.jpg 768w, http://brm.dev:81/wp-content/uploads/2017/08/mast-services-1024x205.jpg 1024w" sizes="(max-width: 2000px) 100vw, 2000px">';
+                echo '<img width="2000" height="400" src="http://209.126.119.193/~brm/wp-content/uploads/2017/08/mast-services.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://209.126.119.193/~brm/wp-content/uploads/2017/08/mast-services.jpg 2000w, http://209.126.119.193/~brm/wp-content/uploads/2017/08/mast-services-300x60.jpg 300w, http://209.126.119.193/~brm/wp-content/uploads/2017/08/mast-services-768x154.jpg 768w, http://209.126.119.193/~brm/wp-content/uploads/2017/08/mast-services-1024x205.jpg 1024w" sizes="(max-width: 2000px) 100vw, 2000px">';
             }
             ?>
                 <div class="mast-overlay">
