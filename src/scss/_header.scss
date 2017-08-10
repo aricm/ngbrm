@@ -319,10 +319,6 @@
     }
 }
 
-@media screen and (max-width: 860px) {
-
-}
-
 @media screen and (max-width: 790px) {
     .page-title {
         h1 {
@@ -421,6 +417,10 @@
         }
     }
     body.sticky-header {
+        .header-logo {
+            margin: 0;
+            padding: 0 0.5rem;
+        }
         .header-block {
             flex: 6;
             margin: 0 !important;
