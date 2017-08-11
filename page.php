@@ -1,5 +1,6 @@
 <?php
     get_header();
+    $postId = get_the_post_id();
 ?>
     <?php while ( have_posts() ) : the_post(); ?>
 
@@ -25,7 +26,9 @@
                 <div class="mast-overlay">
                     <h1><?php echo $primaryTitle; ?></h1>
                     <h2><?php echo $sectionTitle; ?></h2>
+                    <?php if( $postId != 15 ): ?>
                     <a class="btn btn-page-mast" href="<?php echo home_url('/contact/'); ?>">Contact Us Today!</a>
+                    <?php endif; ?>
                 </div>
         </div>
 

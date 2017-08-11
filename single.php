@@ -27,7 +27,7 @@
 
 <div class="container blog-content">
     <div class="row">
-        <div class="col col-12 col-md-9">
+        <div class="col col-12 col-lg-9">
             <?php while ( have_posts() ) : the_post(); ?>
 
                 <article>
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div class="col col-12 col-md-3">
+        <div class="col col-12 col-lg-3">
 
             <div class="blog-sidebar">
                 <?php dynamic_sidebar( 'page_sidebar_1' ); ?>

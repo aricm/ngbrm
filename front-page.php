@@ -30,33 +30,33 @@
         <?php endif; ?>
 
         <div class="home-cards">
-            <div class="home-card">
+            <a class="home-card" href="<?php echo home_url('/services/storage/'); ?>">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/homepage-card1.jpg" alt="">
                 <div class="overlay">
                     <h2 class="home-card-title">Document Storage</h2>
                     <div class="btn-container">
-                        <a href="<?php echo home_url('/services/storage/'); ?>" class="btn btn-page-mast">Learn More</a>
+                        <span class="btn btn-page-mast">Learn More</span>
                     </div>
                 </div>
-            </div>
-            <div class="home-card">
+            </a>
+            <a class="home-card" href="<?php echo home_url('/services/scanning/'); ?>">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/homepage-card2.jpg" alt="">
                 <div class="overlay">
                     <h2 class="home-card-title">Document Scanning</h2>
                     <div class="btn-container">
-                        <a href="<?php echo home_url('/services/scanning/'); ?>" class="btn btn-page-mast">Learn More</a>
+                        <span class="btn btn-page-mast">Learn More</span>
                     </div>
                 </div>
-            </div>
-            <div class="home-card">
+            </a>
+            <a class="home-card" href="<?php echo home_url('/services/shredding/'); ?>">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/homepage-card3.jpg" alt="">
                 <div class="overlay">
                     <h2 class="home-card-title">Document Shredding</h2>
                     <div class="btn-container">
-                        <a href="<?php echo home_url('/services/shredding/'); ?>" class="btn btn-page-mast">Learn More</a>
+                        <span class="btn btn-page-mast">Learn More</span>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="page-content">

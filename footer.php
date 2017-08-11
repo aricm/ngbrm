@@ -20,7 +20,7 @@
 <footer class="container-fluid site-footer">
     <div class="container">
         <div class="row primary-footer">
-            <div class="request-quote"><a class="btn btn-primary" href="<?php echo home_url('/contact/'); ?>">GET A QUOTE</a></div>
+            <div class="request-quote"><a class="btn btn-primary" href="javascript:void(0);" data-toggle="modal" data-target="#popForm">GET A QUOTE</a></div>
             <div class="phone">Call Now: <a href="tel:18888966222">1-888-896-6222</a></div>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/company/business-records-management-inc-" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a>
@@ -70,6 +70,25 @@
 </footer>
 <?php wp_footer(); ?>
 
+<div class="modal fade" id="popForm" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header popover-header">
+                <h5 class="modal-title">Request a Quote</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <?php echo do_shortcode( '[contact-form-7 id="583" title="Popover Form" html_class="popover-form"]' ); ?>
+            </div>
+            <div class="modal-footer hidden-sm-up">
+                <button type="button" class="close popover-btn-cancel" data-dismiss="modal" aria-label="Close"><span>Cancel</span> &times;</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="closeNav" class="close-nav hidden-xl-up">Close <i class="fa fa-times"></i></button>
 <script>
     jQuery(document).on("scroll", function() {
@@ -87,5 +106,38 @@
         jQuery('body').toggleClass('no-scroll');
     });
 </script>
+<?php if( $postId == 15 ): ?>
+    <script>
+     function initMap() {
+        // 27.9615986,-82.4291098 ... ChIJCd8q7q3FwogRDp1rA4QgBeo
+        // 28.0189726,-82.5292386 ... ChIJ49k1NZrBwogRLHSqzJHahPg
+        var loc = {lat: 27.9615986, lng: -82.4291098};
+        var loc2 = {lat: 28.0189726, lng: -82.5292386};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: loc
+        });
+        var marker = new google.maps.Marker({
+            position: loc,
+            url: "https://search.google.com/local/writereview?placeid=ChIJCd8q7q3FwogRDp1rA4QgBeo",
+            map: map
+        });
+        var marker2 = new google.maps.Marker({
+            position: loc2,
+            url: "https://search.google.com/local/writereview?placeid=ChIJ49k1NZrBwogRLHSqzJHahPg",
+            map: map
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+              // window.location.href = marker.url;
+              window.open(this.url, '_blank');
+        });
+        google.maps.event.addListener(marker2, 'click', function() {
+              window.open(this.url, '_blank');
+        });
+     }
+       </script>
+       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBog0XF2MKfQWgMWPot5kYjLVuqizfhQss&callback=initMap"></script>
+    <?php endif; ?>
 </body>
 </html>

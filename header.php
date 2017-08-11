@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="header-request">
-            <a href="<?php echo home_url('/contact/'); ?>">
+            <a href="javascript:void(0);" data-toggle="modal" data-target="#popForm">
                 <span>Request a Quote</span>
             </a>
         </div>

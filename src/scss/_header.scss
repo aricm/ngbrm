@@ -87,7 +87,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 99990;
+        z-index: 999;
         box-shadow: 0 10px 20px rgba(black,0.2);
         height: 80px;
         opacity: 0.95;
@@ -351,6 +351,15 @@
             // display: none;
         }
     }
+    .home-page-mast {
+        height: 300px;
+        img {
+            position: absolute;
+            top: -15px;
+            left: -240px;
+            max-width: 1000px;
+        }
+    }
 }
 @media screen and (max-width: 719px) {
     .header-request {
@@ -365,18 +374,6 @@
         }
         .nav-toggle {
             display: inline-block;
-        }
-    }
-}
-
-@media screen and (max-width: 560px) {
-    .home-page-mast {
-        height: 300px;
-        img {
-            position: absolute;
-            top: -15px;
-            left: -340px;
-            max-width: 1000px;
         }
     }
 }
