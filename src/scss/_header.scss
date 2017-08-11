@@ -4,6 +4,7 @@
     justify-content: flex-end;
     padding: 0 !important;
     background-color: #fff;
+    transition: height 0.2s ease-in-out;
 }
 .header-logo {
     margin-right: auto;
@@ -89,6 +90,7 @@
         z-index: 99990;
         box-shadow: 0 10px 20px rgba(black,0.2);
         height: 80px;
+        opacity: 0.95;
     }
     .header-request {
         a {

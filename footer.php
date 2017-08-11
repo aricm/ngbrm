@@ -73,12 +73,10 @@
 <div id="closeNav" class="close-nav hidden-xl-up">Close <i class="fa fa-times"></i></button>
 <script>
     jQuery(document).on("scroll", function() {
-        if
-      (jQuery(document).scrollTop() > 25){
+        // console.log(jQuery(document).scrollTop());
+        if ( jQuery(document).scrollTop() > 120 ){
           jQuery("body").addClass("sticky-header");
-        }
-        else
-        {
+        } else {
             jQuery("body").removeClass("sticky-header");
         }
     });
