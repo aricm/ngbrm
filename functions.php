@@ -49,7 +49,7 @@ add_action( 'after_setup_theme', 'ngbrm_setup' );
 function ngbrm_scripts() {
     wp_enqueue_script( 'ngacustom', get_stylesheet_directory_uri() . '/js/ngbrm.js', 'jquery', '1.0', true );
     // override the shortcode plugin enqueue otherwise bootstrap comes after the site css, making overrides more cumbersome
-    wp_enqueue_style( 'bootstrap', plugins_url() . '/bootstrap-4-wordpress-shortcodes/libraries/bootstrap-4.0.0/css/bootstrap.min.css',false );
+    wp_enqueue_style( 'bootstrap', plugins_url() . '/netstrap/libraries/bootstrap-4.0.0/css/bootstrap.min.css',false );
     wp_enqueue_style( 'ngbrm_main', get_stylesheet_directory_uri() . '/ngbrm.css' );
     wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css' );
 }

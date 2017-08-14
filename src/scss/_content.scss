@@ -200,6 +200,9 @@
 	color: $secondaryColor;
 	padding-left: 2rem;
 	font-size: 1.1rem !important;
+	// max-height: 0;
+	// overflow: hidden;
+	// transition: max-height 0.75s ease-in-out;
 	a {
 		color: $textColor !important;
 		&:hover {
@@ -207,7 +210,9 @@
 		}
 	}
 	&.open {
-		display: block;
+		// display: block;
+		margin-bottom: 2rem;
+		// max-height: 1000px;
 	}
 }
 

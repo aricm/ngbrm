@@ -18,7 +18,7 @@
             <div class="header-nav">
 
                 <a href="javascript:void(0);" id="navToggle" class="hidden-xl-up nav-toggle"><i class="fa fa-bars"></i></a>
-                <a href="<?php echo home_url('/contact/'); ?>" class="header-request-icon"><i class="fa fa-envelope"></i></a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#popForm" class="header-request-icon"><i class="fa fa-envelope"></i></a>
 
                 <nav id="mainNav" class="main-nav" role="navigation">
                     <?php wp_nav_menu( array( 'theme_location' => 'main', 'container' => '' ) ); ?>

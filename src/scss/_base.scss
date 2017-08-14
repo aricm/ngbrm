@@ -4,14 +4,14 @@ body {
     font-size: 1.15rem;
     color: $textColor;
     &.no-scroll {
-        position: absolute;
+        // position: absolute;
         overflow: hidden;
     }
 }
 
 @media screen and (min-width: 1200px) {
     body.no-scroll {
-        position: static;
+        // position: static;
         overflow: auto;
     }
 }

@@ -93,7 +93,7 @@
 <script>
     jQuery(document).on("scroll", function() {
         // console.log(jQuery(document).scrollTop());
-        if ( jQuery(document).scrollTop() > 120 ){
+        if ( jQuery(document).scrollTop() > 91 ){
           jQuery("body").addClass("sticky-header");
         } else {
             jQuery("body").removeClass("sticky-header");
@@ -109,8 +109,6 @@
 <?php if( $postId == 15 ): ?>
     <script>
      function initMap() {
-        // 27.9615986,-82.4291098 ... ChIJCd8q7q3FwogRDp1rA4QgBeo
-        // 28.0189726,-82.5292386 ... ChIJ49k1NZrBwogRLHSqzJHahPg
         var loc = {lat: 27.9615986, lng: -82.4291098};
         var loc2 = {lat: 28.0189726, lng: -82.5292386};
 

@@ -45,3 +45,13 @@
 		}
 	}
 }
+
+@media screen and (max-width: 430px) {
+	.page-menu {
+		ul {
+			li:after {
+				content: "" !important;
+			}
+		}
+	}
+}
