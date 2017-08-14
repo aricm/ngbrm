@@ -13,22 +13,6 @@ function noParagraphs($content){
     return $content;
 }
 
-/*
-* FontAwesome
-*/
-
-function nga_fontawesome($atts) {
-    extract( shortcode_atts( array(
-    	'class' => '',
-    	'style' => ''
-    ), $atts ) );
-
-    $return .= '<i class="fa '. $class .'" style=". $style ."></i>';
-
-    return $return;
-}
-add_shortcode('icon','nga_fontawesome');
-
 
 
 /*
@@ -78,29 +62,6 @@ function nga_checklist_item($atts,$content){
     return $return;
 }
 add_shortcode('checklist_item','nga_checklist_item');
-
-// Generic HTML Elements
-function nga_element($atts,$content){
-    extract( shortcode_atts( array(
-        'selector' => 'div',
-        'class'    => '',
-        'id'       => '',
-        'style'    => ''
-    ), $atts ) );
-
-    $content = do_shortcode( shortcode_unautop( $content ) );
-    $content = noParagraphs($content);
-
-    $return = '';
-    $return .= '<'. $selector .' id="' . $id . '" class="' .  $class . '" style="'. $style .'">';
-        $return .= force_balance_tags($content);
-    $return .= '</'. $selector .'>';
-    return $return;
-}
-add_shortcode('element','nga_element');
-add_shortcode('element2','nga_element');
-add_shortcode('element3','nga_element');
-
 
 /*
 * ACCORDION (for FAQ)
