@@ -21,6 +21,10 @@
 # ignore all files starting with .
 .*
 
+# ignore the compiled stylesheet and sourcemaps
+ngbrm.css
+*.map
+
 # let dev stuff through
 !gulpfile.js
 !Gruntfile.js
