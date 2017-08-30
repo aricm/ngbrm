@@ -61,9 +61,6 @@
 
         <div class="row copyright">
             <div class="copyright-text">Copyright&copy; Business Records Management, Inc. <?php echo date("Y"); ?>. All Rights Reserved</div>
-            <div class="netgain-seo">
-                Website Designed by <a href="http://www.netgainseo.com" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/netgain-logo-sm.png" alt=""></a>
-            </div>
         </div>
     </div>
 
@@ -110,10 +107,11 @@
     <script>
      function initMap() {
         var loc = {lat: 27.9615986, lng: -82.4291098};
-        var loc2 = {lat: 28.0189726, lng: -82.5292386};
+        var loc2 = {lat: 28.046361, lng: -82.6649205};
+        // var loc2 = {lat: 28.0189726, lng: -82.5292386};
 
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12,
+            zoom: 11,
             center: loc
         });
         var marker = new google.maps.Marker({
@@ -123,11 +121,11 @@
         });
         var marker2 = new google.maps.Marker({
             position: loc2,
-            url: "https://search.google.com/local/writereview?placeid=ChIJ49k1NZrBwogRLHSqzJHahPg",
+            // url: "https://search.google.com/local/writereview?placeid=ChIJ49k1NZrBwogRLHSqzJHahPg",
+            url: "https://search.google.com/local/writereview?placeid=ChIJBYtPlmXswogRjdxivfj_z2Y",
             map: map
         });
         google.maps.event.addListener(marker, 'click', function() {
-              // window.location.href = marker.url;
               window.open(this.url, '_blank');
         });
         google.maps.event.addListener(marker2, 'click', function() {

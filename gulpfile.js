@@ -32,7 +32,7 @@ gulp.task('sass', function () {
     .src(cssSrc)
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    // .pipe(autoprefixer()) // use default options (see above)
+    .pipe(autoprefixer()) // use default options (see above)
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(cssDest));
 });
