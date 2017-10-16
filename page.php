@@ -24,8 +24,12 @@
             }
             ?>
                 <div class="mast-overlay">
-                    <h1><?php echo $primaryTitle; ?></h1>
-                    <h2><?php echo $sectionTitle; ?></h2>
+                    <?php if($primaryTitle != '_blank_'): ?>
+                        <h1><?php echo $primaryTitle; ?></h1>
+                    <?php endif;?>
+                    <?php if($sectionTitle != '_blank_'): ?>
+                        <h2><?php echo $sectionTitle; ?></h2>
+                    <?php endif; ?>
                     <?php if( $postId != 15 ): ?>
                     <a class="btn btn-page-mast" href="<?php echo home_url('/contact/'); ?>">Contact Us Today!</a>
                     <?php endif; ?>

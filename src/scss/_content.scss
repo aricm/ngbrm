@@ -261,6 +261,82 @@
 		margin: 0 !important;
 	}
 }
+
+/** Landing Pages */
+.service-mast-bg {
+	background-color: $mediumGray;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-top: 40px;
+	margin-bottom: 16px;
+}
+
+.service-mast {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	text-align: center;
+	color: #fff;
+	.f-item {
+		padding: 0 30px;
+		flex: 1;
+	}
+	img {
+		margin-bottom: 12px;
+	}
+	p {
+		margin: 0 auto;
+		max-width: 232px;
+	}
+}
+.text-mast {
+	background-color: $lightGray;
+	font-size: 14px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	// margin-top: 16px;
+	margin-bottom: 24px;
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+.text-mast-flex {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	ul {
+		flex: 1;
+		max-width: 33%;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			&:before {
+				content: '- ';
+			}
+		}
+	}
+}
+blockquote {
+	display: inline-block;
+	line-height: 1.45;
+	font-style: italic;
+	// font-size: 1.375rem;
+	p {
+		display: inline;
+	}
+	&:before {
+		content: "\201C";
+	}
+	&:after {
+		content: "\201D";
+	}
+}
+cite {
+	// font-size: 1.375rem;
+}
+
 // Adjust margin for the above page's blurred-bg
 .page-id-157 {
 	.blurred-bg {
@@ -279,7 +355,7 @@
 }
 
 // Ignore those stragglers
-main p:last-child {
+main > p:last-child {
 	margin: 0 !important;
 }
 
@@ -304,6 +380,9 @@ main p:last-child {
 .text-lg {
 	font-size: 1.2rem;
 }
+.text-lgr {
+	font-size: 1.375rem;
+}
 
 @media screen and (max-width: 1199px) {
 	.home-cards {
@@ -315,6 +394,14 @@ main p:last-child {
 	        	top: 43%;
 	        }
 	    }
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.text-mast-flex {
+		ul {
+			max-width: 40%;
+		}
 	}
 }
 
@@ -364,6 +451,28 @@ main p:last-child {
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.text-mast-flex {
+		ul {
+			max-width: none;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.col {
+		&:not(:first-child) {
+			margin-top: 24px;
+		}
+	}
+	.service-mast {
+		.f-item {
+			flex-basis: 100%;
+			padding: 0;
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 660px) {
@@ -389,4 +498,16 @@ main p:last-child {
             }
         }
     }
+}
+
+@media screen and (max-width: 600px) {
+	.text-mast-flex {
+		ul {
+			flex-basis: 100%;
+			max-width: 100%;
+			&:first-child {
+				// margin-top: 16px;
+			}
+		}
+	}
 }
