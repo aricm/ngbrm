@@ -41,7 +41,7 @@ add_shortcode('checklist','nga_checklist');
 function nga_checklist_item($atts,$content){
     extract( shortcode_atts( array(
 		'class' => '',
-		'image' => 'http://209.126.119.193/~brm/wp-content/uploads/2017/08/check-gray.png' // full path to image in media library
+		'image' => 'https://brm-inc.com/wp-content/uploads/2017/08/check-gray.png' // full path to image in media library
     ), $atts ) );
 
     $content = do_shortcode( shortcode_unautop( $content ) );
