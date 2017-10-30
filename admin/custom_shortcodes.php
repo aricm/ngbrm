@@ -94,3 +94,49 @@ function nga_accordion($atts,$content) {
     return $ao;
 }
 add_shortcode('accordion_item','nga_accordion');
+
+function nga_paypal_form() {
+    $ppf = '';
+
+    $ppf .= '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="payment-form">';
+        //Payment Type
+        $ppf .= '<input type="hidden" name="cmd" value="_xclick" />';
+        //Payment Recipient
+        $ppf .= '<input type="hidden" name="business" value="bbrown@brm-inc.com">';
+        //Item Name
+        $ppf .= '<input type="hidden" name="item_name" value="Business Records Management, Inc. - Invoice">';
+
+        $ppf .= '<p>';
+            $ppf .= '<label>Account Number</label><br/>';
+            $ppf .= '<span>';
+                $ppf .= '<input type="text" name="acctnumber" value="" placeholder="Account Number*">';
+            $ppf .= '</span>';
+        $ppf .= '</p>';
+        $ppf .= '<p>';
+            $ppf .= '<label>Invoice Number</label><br/>';
+            $ppf .= '<span>';
+                $ppf .= '<input type="text" name="invoicenumber" value="" placeholder="Invoice Number*">';
+            $ppf .= '</span>';
+        $ppf .= '</p>';
+        $ppf .= '<p>';
+            $ppf .= '<label>Payment Amount</label><br/>';
+            $ppf .= '<span>';
+                $ppf .= '<input type="text" name="amount" value="" placeholder="Payment Amount*">';
+            $ppf .= '</span>';
+        $ppf .= '</p>';
+        $ppf .= '<p class="submit-container">';
+            $ppf .= '<input type="submit" value="Make Payment" class="wpcf7-form-control wpcf7-submit btn btn-secondary">';
+        $ppf .= '</p>';
+    $ppf .= '</form>';
+
+    $ppf .= '<script>';
+        $ppf .= '
+            jQuery("input[name=\"acctnumber\"],input[name=\"invoicenumber\"]").on("keyup", function(){
+                jQuery("input[name=\"item_name\"]").val("Acct: "+jQuery("input[name=\"acctnumber\"]").val()+" / Invoice: "+jQuery("input[name=\"invoicenumber\"]").val());
+            });
+        ';
+    $ppf .= '</script>';
+
+    return $ppf;
+}
+add_shortcode('nga_paypal_form','nga_paypal_form');
