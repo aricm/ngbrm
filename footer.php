@@ -37,7 +37,7 @@
                 <a href="http://www.naidonline.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-naid.png" alt=""></a>
             </div>
             <div class="aff">
-                <a href="https://brm-inc.com/privacy-policy/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-privacy-light.png" alt=""></a>
+                <a href="http://www.prismintl.org/Privacy-Certification/privacy/about-the-privacy-plus-program.html" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-privacy-light.png" alt=""></a>
             </div>
             <div class="aff">
                 <a href="http://www.aiim.org/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/aff-aiim.png" alt=""></a>
